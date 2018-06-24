@@ -13,6 +13,8 @@
     "test/truffle": "truffle test test/truffle/*",
     "test/dapp": "npm run unit && npm run e2e",
     "test": "npm run test/truffle && npm run test/dapp",
+    "ganache": "ganache-cli -p 8545 -m 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat' > /dev/null &",
+    "stop": "sudo kill `sudo lsof -t -i:8545`",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {

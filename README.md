@@ -3,9 +3,10 @@
 ### Things to Add to this truffle box
 
 - Implement Continuous Integration/Continuous Deployment (via surge)
+- Need to set up linting somehow, examine the other truffle vuejs boxes and coverage report.
 - Deploy to test networks, ropsten and rinksby
 - Creating a documentation format (jsdoc, sphinx or possibly latex based, maybe docsuarus)
-- Allow token creation and transferring
+- Allow token creation and transferring 
 
 # Vue.js truffle box
 

@@ -21,12 +21,24 @@ install:
   - npm install
 script:
   #- npm run lint
+  - stage: test
   - npm run ganache
   - sleep 5
   - truffle migrate --network development
-  - npm run test/truffle
+  - npm run test/truffle 
   - npm run unit
   - npm run e2e
   - npm run stop
-#after_script:
-#  - npm run coverage && cat coverage/lcov.info | coveralls
+  - stage: solidity-docs
+  - sudo add-apt-repository ppa:ethereum/ethereum
+  - sudo apt-get update
+  - sudo apt-get -y install solc
+  - solidity-docgen . contracts docs
+  -deploy:
+  - provider: gcs
+  - access_key_id: "GCS Interoperable Access Key ID"
+  - secret_access_key: "GCS Interoperable Access Secret"
+  - bucket: "GCS Bucket"
+  - skip_cleanup: true
+after_script:
+  - npm run coverage && cat coverage/lcov.info | coveralls

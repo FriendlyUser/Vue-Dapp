@@ -1,3 +1,9 @@
+ /**
+   * @file testing.js
+   * @param {object} - privacy gown
+   * @param {object} - security
+   * @summary typical jsdoc not working
+   */
 <template>
   <div id="app">
     <img src="./assets/logo.png">
@@ -6,6 +12,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'app'
 }

@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/FriendlyUser/Vue-Dapp.svg?branch=master)](https://travis-ci.org/FriendlyUser/Vue-Dapp)
 # Usage of the truffle box
 
 ### Things to Add to this truffle box
@@ -8,6 +9,13 @@
 - Creating a documentation format (jsdoc, sphinx or possibly latex based, maybe docsuarus)
 - Allow token creation and transferring 
 
+The solcdog python package is used to generate documentation for the smart contracts, I could edit the markdown output so that the resulting file is using in docusarus.
+### References for CI
+
+Used 
+- https://flatmap.it/2017/11/16/starting-selenium-server-inside-travis/.
+- and pointers for the truffle-ci box.
+- https://truffleframework.com/tutorials/using-infura-custom-provider
 # Vue.js truffle box
 
 A [`truffle box`](http://truffleframework.com/boxes/) to serve as the foundation of any [`Truffle`](http://truffleframework.com) and [`Vue.js`](https://vuejs.org/) dApp. Comes with [`Vue.js`](https://vuejs.org/), [`vue-router`](https://router.vuejs.org/en/), [`Vuex`](https://vuex.vuejs.org/en/intro.html) and [`sass-loader`](https://github.com/webpack-contrib/sass-loader). A minimalist user authentication smart contract is also provided.

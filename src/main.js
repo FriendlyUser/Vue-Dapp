@@ -1,7 +1,14 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+/**
+ * A quite wonderful function.
+ * @file  main.js
+ * @param {object} - privacy gown
+ * @param {object} - security
+ * @returns {survival} 
+ */
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 import Web3 from 'web3'
 import router from './router'
 

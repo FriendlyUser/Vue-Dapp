@@ -1,0 +1,9 @@
+../build/*.js
+./*.
+./src/App.vue
+./src/util/constants/*.js
+./src/util/constants/casinoContract.js
+./test/unit/*.js
+./test/unit/index.js
+src/util/constants
+./src/util/constants

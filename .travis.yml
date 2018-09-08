@@ -18,6 +18,7 @@ before_install:
 install:
   - npm install -g truffle
   - npm install -g ganache-cli
+  - npm install --global @vuedoc/md
   - npm install
 script:
   #- npm run lint
@@ -38,7 +39,7 @@ script:
   - sudo apt-get update
   - sudo apt-get -y install solc
   - ls
-  - mkdir docs
+  - ./vueDoc.sh
   - solidity-docgen /home/travis/build/FriendlyUser/Vue-Dapp /home/travis/build/FriendlyUser/Vue-Dapp/contracts /home/travis/build/FriendlyUser/Vue-Dapp
   - cd docs
   - ls

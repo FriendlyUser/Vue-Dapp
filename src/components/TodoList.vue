@@ -10,6 +10,13 @@
 </template>
 
 <script>
+/**
+   * The custom HTML `<textarea>` component.
+   * 
+   * @author David Li
+   * @license MIT
+   */
+
 import TodoListTest from '@/js/todolist'
 
 export default {

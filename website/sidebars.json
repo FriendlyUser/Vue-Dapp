@@ -1,11 +1,6 @@
 {
-  "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+  "components": {
+    "First Category": ["TodoList.md", "Footer.md", "Dashboard.md", "HelloMetamask.md","MetamaskState.md","Signup.md"]
   },
   "Application": {
     "App Files": ["App","main","users"],

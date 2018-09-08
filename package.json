@@ -16,11 +16,13 @@
     "test": "npm run test/truffle && npm run test/dapp",
     "ganache": "ganache-cli -p 8545 -m 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat' > /dev/null &",
     "stop": "sudo kill `sudo lsof -t -i:8545`",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "coverage": "./node_modules/.bin/solidity-coverage"
   },
   "dependencies": {
     "dotenv": "^6.0.0",
     "font-awesome": "^4.7.0",
+    "solidity-coverage": "^0.5.11",
     "truffle-contract": "^3.0.0",
     "truffle-hdwallet-provider": "0.0.3",
     "vue": "^2.4.2",

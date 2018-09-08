@@ -40,11 +40,10 @@ const siteConfig = {
   headerLinks: [
     {doc: 'Migrations', label: 'Docs'},
     {page: "help", label: "Help" },
-    {search: true},
     // Links to href destination
-    { href: "https://github.com/", label: "GitHub" },
+    { components: "TodoList.md", label: "TodoList" },
     // Links to href destination
-    { href: "/components/TodoList.md", label: "TodoList" },
+    { href: "https://github.com/FriendlyUser/Vue-Dapp/", label: "Github" },
     {blog: true, label: 'Blog'},
   ],
 

@@ -39,9 +39,10 @@ export default {
           console.log(todolistStruct)
         }
       })
-    }).catch(err => {
-          console.log(err)
-          console.log('Test')
+    })
+    .catch(err => {
+      console.log(err)
+      console.log('Test')
     })
   },
   methods: {

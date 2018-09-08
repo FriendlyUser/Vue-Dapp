@@ -59,7 +59,7 @@ contract('Todo', function(accounts) {
             for (let i = 0; i < 2; i++) {
                 const todo = {
                     ids:            todoList[FIELD_IDS][i].toNumber(),
-                    contents:       todoList[FIELD_CONTENTS][i],
+                    contents:       web3.toUtf8(todoList[FIELD_CONTENTS][i]),
                     owners:         todoList[FIELD_OWNERS][i],
                     isCompleteds:   todoList[FIELD_ISCOMPLETEDS][i],
                     timestamps:     todoList[FIELD_TIMESTAMPS][i].toNumber()

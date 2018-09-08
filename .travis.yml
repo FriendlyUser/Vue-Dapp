@@ -43,8 +43,10 @@ script:
   - cd website
   - npm install
   - npm run build
+  - mv ./sidebars.json build/vue-dapp
   - cd ../
   # Consider removing docs/components
+  - rm -rf docs/components
   - mv docs mddocs
   - mv mddocs website/build/vue-dapp
 deploy:

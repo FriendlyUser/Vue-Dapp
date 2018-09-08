@@ -13,7 +13,7 @@ contract('User', function(accounts) {
         myTodoListInstance = await TodoList.deployed()
         assert.ok(myTodoListInstance)
     })
-    it("get the size of the user contract", function() {
+    it("get the size of the TodoList contract", function() {
         return TodoList.deployed().then(function(instance) {
           var bytecode = instance.constructor._json.bytecode;
           var deployed = instance.constructor._json.deployedBytecode;

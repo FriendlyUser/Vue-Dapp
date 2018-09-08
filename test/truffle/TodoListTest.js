@@ -1,6 +1,6 @@
 var TodoList = artifacts.require("./TodoList.sol");
 const utils = require('./helpers/utils')
-contract('User', function(accounts) {
+contract('Todo', function(accounts) {
     let myUserInstance;
     let owner    = accounts[0];
     let nonOwner = accounts[1];
@@ -28,10 +28,10 @@ contract('User', function(accounts) {
         //console.log('Cool')
         it("Adding a Todo Item", async() =>  {
            const todoitem = "complete DApp"
-           const todoCreated = await myTodoListInstance.create(todoitem)
-           await myTodoListInstance.create(todoitem)
-            await myTodoListInstance.create(todoitem)
-             await myTodoListInstance.create(todoitem)
+           const todoCreated = await myTodoListInstance.addTodo(todoitem)
+           await myTodoListInstance.addTodo(todoitem)
+           await myTodoListInstance.addTodo(todoitem)
+           await myTodoListInstance.addTodo(todoitem)
            const allTodos = await myTodoListInstance.todos()
            console.log(allTodos)
         });

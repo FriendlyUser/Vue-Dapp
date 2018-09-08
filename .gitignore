@@ -38,6 +38,7 @@ website/node_modules
 
 website/i18n/*
  
-docs
+docs/*
+!docs/components/
 *.zip
 solcdog

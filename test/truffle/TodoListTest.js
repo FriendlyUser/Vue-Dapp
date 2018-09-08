@@ -28,11 +28,11 @@ contract('Todo', function(accounts) {
         //console.log('Cool')
         it("Adding a Todo Item", async() =>  {
            const todoitem = "complete DApp"
-           const todoCreated = await myTodoListInstance.addTodo(todoitem)
-           await myTodoListInstance.addTodo(todoitem)
-           await myTodoListInstance.addTodo(todoitem)
-           await myTodoListInstance.addTodo(todoitem)
+           const todoitemAscii = web3.fromAscii(todoitem)
+           console.log("      adding Todo Item")
+           await myTodoListInstance.addTodo(todoitemAscii)
            const allTodos = await myTodoListInstance.todos()
+           console.log("      printing Todo Items")
            console.log(allTodos)
         });
         /** 

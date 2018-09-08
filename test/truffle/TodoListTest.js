@@ -32,7 +32,8 @@ contract('Todo', function(accounts) {
            await myTodoListInstance.addTodo(todoitem)
            const todoitem2 = "num2"
            await myTodoListInstance.addTodo(todoitem2)
-           const allTodos = await myTodoListInstance.todos()
+           console.log("      getting all Todo Items")
+           const allTodos = await myTodoListInstance.returnAllTodos()
            console.log("      printing Todo Items")
            console.log(allTodos)
         });

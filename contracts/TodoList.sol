@@ -29,4 +29,8 @@ contract TodoList {
       require(!todos[msg.sender][_todoId].isCompleted);
       todos[msg.sender][_todoId].isCompleted = true;
    }
+
+   function returnAllTodos() external returns (Todo[]){
+       return todos[msg.sender];
+   }
 }

@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friendlyuser.github.io//Vue-Dapp/blog</id>
     <title>Vue Dapp info Blog</title>
-    <updated>2017-10-24T06:00:00Z</updated>
+    <updated>2018-08-25T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://friendlyuser.github.io//Vue-Dapp/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Vue Dapp info news and events.</subtitle>
     <logo>https://friendlyuser.github.io//Vue-Dapp//img/docusaurus.svg</logo>
     <rights>Copyright © 2018 David Li</rights>
+    <entry>
+        <title type="html"><![CDATA[Travis CI Configured]]></title>
+        <id>https://friendlyuser.github.io//Vue-Dapp/blog/2018/08/25/CI-version-1.2.0.html</id>
+        <link href="https://friendlyuser.github.io//Vue-Dapp/blog/2018/08/25/CI-version-1.2.0.html">
+        </link>
+        <updated>2018-08-25T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> <p>Test goes here.</p> <img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuNBEpytDB57GjLC8o2n8pSdCIrMmKWW6oNB11L0bGrABIufnIRha9-EMIot8oQ_aSaZDIm7P3000" alt="">]]></summary>
+        <author>
+            <name>David Li</name>
+            <uri>http://twitter.com/davidLi</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
         <id>https://friendlyuser.github.io//Vue-Dapp/blog/2017/10/24/new-version-1.0.0.html</id>

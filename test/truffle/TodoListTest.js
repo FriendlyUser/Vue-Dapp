@@ -1,4 +1,4 @@
-var Users = artifacts.require("./Users.sol");
+var TodoList = artifacts.require("./TodoList.sol");
 const utils = require('./helpers/utils')
 contract('User', function(accounts) {
     let myUserInstance;
@@ -10,8 +10,8 @@ contract('User', function(accounts) {
     beforeEach(async () => {
         // [accounts[0], accounts[1]], requiredConfirmations, dailyLimit
 
-        myUserInstance = await Users.deployed()
-        assert.ok(myUserInstance)
+        myTodoListInstance = await TodoList.deployed()
+        assert.ok(myTodoListInstance)
     })
     it("get the size of the user contract", function() {
         return TodoList.deployed().then(function(instance) {
@@ -26,19 +26,16 @@ contract('User', function(accounts) {
     });
     describe("Add Todo", async() => {
         //console.log('Cool')
-        it("Adding a User", async() =>  {
-           const userCreated = await myUserInstance.create(username)
-           const userCreatedAddress = utils.getParamFromTxEvent( userCreated, '_address', null, 'UserCreated')
-           const userCreatedPseudo = utils.getParamFromTxEvent( userCreated, '_pseudo', null, 'UserCreated')
-           //console.log(userCreatedAddress)
-           //console.log(userCreatedPseudo)
-           const web3Test = web3.toUtf8(userCreatedPseudo)
-           assert.strictEqual(web3Test,username,"username is added correctly")
-           assert.strictEqual(userCreatedAddress,owner,"address matches up with owner")
-            
-           const userAdded = await myUserInstance.exists(owner)
-           assert.strictEqual(userAdded,true,"User must exist")
+        it("Adding a Todo Item", async() =>  {
+           const todoitem = "complete DApp"
+           const todoCreated = await myTodoListInstance.create(todoitem)
+           await myTodoListInstance.create(todoitem)
+            await myTodoListInstance.create(todoitem)
+             await myTodoListInstance.create(todoitem)
+           const allTodos = await myTodoListInstance.todos()
+           console.log(allTodos)
         });
+        /** 
         it("Authenticating a User", async() => {
             const usernameTst = await myUserInstance.authenticate()
             const usernameStr = web3.toUtf8(usernameTst)
@@ -54,5 +51,6 @@ contract('User', function(accounts) {
             const userDestroyedAddress = utils.getParamFromTxEvent( userDestroyedEvent, '_address', null, 'UserDestroyed')
             assert.strictEqual(userDestroyedAddress,owner,"User is successful destroyed")
         });
+        */
     });
 });

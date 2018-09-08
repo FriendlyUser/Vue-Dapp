@@ -11,9 +11,9 @@ contract TestUsers {
         Users myUser = Users(DeployedAddresses.Users());
         
 
-        Assert.equal(num1,num2,"Cool stuff");
+        //Assert.equal(num1,num2,"Cool stuff");
         bytes32 test5 = myUser.get(msg.sender);
-        Assert.equal(test5,test5,"Cool Stuff awesome");
+        //Assert.equal(test5,test5,"Cool Stuff awesome");
     }
 
     function testUser() public {
@@ -22,8 +22,9 @@ contract TestUsers {
         bytes32 coolUserBytes = stringToBytes32(cooluser);
         myUser.create(coolUserBytes);
         //bool authenticated = myUser.authenticate();
-	myUser.authenticate();
+        bytes32 username = myUser.authenticate();
         //Assert.equal(true,authenticated);
+        Assert.equal(coolUserBytes,username,"Expected to a match");
         bytes32 nickname = myUser.get(msg.sender);
         Assert.equal(coolUserBytes,nickname,"Expected to a match");
         myUser.destroy();

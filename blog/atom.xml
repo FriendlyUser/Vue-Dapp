@@ -6,7 +6,7 @@
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://friendlyuser.github.io//Vue-Dapp/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Vue Dapp info news and events.</subtitle>
-    <logo>https://friendlyuser.github.io//Vue-Dapp//img/docusaurus.svg</logo>
+    <logo>https://friendlyuser.github.io//Vue-Dapp//img/VueDappLogo.png</logo>
     <rights>Copyright © 2018 David Li</rights>
     <entry>
         <title type="html"><![CDATA[Sept Status Report]]></title>
@@ -33,15 +33,15 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[New Version 1.0.0]]></title>
+        <title type="html"><![CDATA[Vuedoc and Icons]]></title>
         <id>https://friendlyuser.github.io//Vue-Dapp/blog/2017/10/24/new-version-1.0.0.html</id>
         <link href="https://friendlyuser.github.io//Vue-Dapp/blog/2017/10/24/new-version-1.0.0.html">
         </link>
         <updated>2017-10-24T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> <p>Test goes here.</p> <img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IG80" alt="">]]></summary>
+        <summary type="html"><![CDATA[<p>Previously, I had used a ad-hoc method of documentation.js and jsdoc to generate documentation for this project. Icons are from free website <a href="https://all-free-download.com/free-vector/download/business_icons_268686_download.html">all-free-download</a> and I assume since I am doing open source projects, I can use it for free.</p> <p>Using vuedoc is ...</p>]]></summary>
         <author>
-            <name>Eric Nakagawa</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
+            <name>David Li</name>
+            <uri>http://twitter.com/davidli</uri>
         </author>
     </entry>
     <entry>

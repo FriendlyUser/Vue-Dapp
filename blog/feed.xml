@@ -9,7 +9,7 @@
         <generator>Feed for Node.js</generator>
         <image>
             <title>Vue Dapp info Blog</title>
-            <url>https://friendlyuser.github.io//Vue-Dapp//img/docusaurus.svg</url>
+            <url>https://friendlyuser.github.io//Vue-Dapp//img/VueDappLogo.png</url>
             <link>https://friendlyuser.github.io//Vue-Dapp/blog</link>
         </image>
         <copyright>Copyright © 2018 David Li</copyright>
@@ -28,11 +28,11 @@
             <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> <p>Test goes here.</p> <img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuNBEpytDB57GjLC8o2n8pSdCIrMmKWW6oNB11L0bGrABIufnIRha9-EMIot8oQ_aSaZDIm7P3000" alt="">]]></description>
         </item>
         <item>
-            <title><![CDATA[New Version 1.0.0]]></title>
+            <title><![CDATA[Vuedoc and Icons]]></title>
             <link>https://friendlyuser.github.io//Vue-Dapp/blog/2017/10/24/new-version-1.0.0.html</link>
             <guid>https://friendlyuser.github.io//Vue-Dapp/blog/2017/10/24/new-version-1.0.0.html</guid>
             <pubDate>Tue, 24 Oct 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> <p>Test goes here.</p> <img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IG80" alt="">]]></description>
+            <description><![CDATA[<p>Previously, I had used a ad-hoc method of documentation.js and jsdoc to generate documentation for this project. Icons are from free website <a href="https://all-free-download.com/free-vector/download/business_icons_268686_download.html">all-free-download</a> and I assume since I am doing open source projects, I can use it for free.</p> <p>Using vuedoc is ...</p>]]></description>
         </item>
         <item>
             <title><![CDATA[Adding RSS Support]]></title>

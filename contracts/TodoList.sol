@@ -30,7 +30,29 @@ contract TodoList {
       todos[msg.sender][_todoId].isCompleted = true;
    }
 
-   function returnAllTodos() external returns (Todo[]){
-       return todos[msg.sender];
+   function returnAllTodos(uint[] indexes) external 
+   returns (
+       uint256[],
+       bytes32[],
+       address[],
+       bool[],
+       uint256[]
+   )
+   {
+        uint256[] memory ids          = new uint256[](indexes.length);
+        bytes32[] memory contents     = new bytes32[](indexes.length);
+        address[] memory owners       = new address[](indexes.length);
+        bool[]    memory isCompleteds = new bool[](indexes.length);
+        uint256[] memory timestamps   = new uint256[](indexes.length);
+        
+        for (uint256 i = 0; i < indexes.length; i++) {
+            Todo storage todo = todos[msg.sender];
+            ids[i] = todos.id;
+            contents[i] = todos.content;
+            owners[i] = todos.owner;
+            isCompleteds[i] = todos.isCompleted;
+            timestamps[i] = todos.timestamp;
+        }
+       return (ids, contents, owners, isCompleteds, timestamps);
    }
 }

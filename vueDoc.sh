@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-path=docs/components
+#path=docs/components
+path=docs
 mkdir -p $path
 vuedoc.md src/components/* --output $path
 echo "Done writing vue components with vuedoc."

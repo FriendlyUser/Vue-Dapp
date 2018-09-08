@@ -1,5 +1,6 @@
 var TodoList = artifacts.require("./TodoList.sol");
 const utils = require('./helpers/utils')
+
 contract('Todo', function(accounts) {
     let myUserInstance;
     let owner    = accounts[0];
@@ -40,10 +41,33 @@ contract('Todo', function(accounts) {
         })
         it("Getting Data of all todos",async() => {
             let idsToCheck = [0,1] 
-            const todoData = await myTodoListInstance.returnAllTodos([0, 1], { from: accounts[0]});
-            console.log('      todos =',todoData )
+            const todoList = await myTodoListInstance.returnAllTodos([0, 1], { from: accounts[0]});
+            console.log('      todos =',todoList )
             const todoData2 = await myTodoListInstance.returnAllTodos([1]);
             console.log('      todos =',todoData2 )
+            console.log('      neatly printing results')
+            // for clarity's sake, let's define some constants so that we can see
+            // which field array we're accessing:
+      
+            const FIELD_IDS  = 0
+            const FIELD_CONTENTS = 1
+            const FIELD_OWNERS = 2
+            const FIELD_ISCOMPLETEDS = 3
+            const FIELD_TIMESTAMPS = 4
+
+            let todoListStructs = []
+            for (let i = 0; i < 2; i++) {
+                const myTodoListInstance = {
+                    ids:            todoList[FIELD_IDS][i],
+                    contents:       todoList[FIELD_CONTENTS][i],
+                    owners:         todoList[FIELD_OWNERS][i],
+                    isCompleteds:   todoList[FIELD_ISCOMPLETEDS][i],
+                    timestamps:     todoList[FIELD_TIMESTAMPS][i]
+                }
+                todoListStructs.push(todo)
+            }
+
+            console.log('       todoListStructs =', todoListStructs)
         })
         /** 
         it("Authenticating a User", async() => {

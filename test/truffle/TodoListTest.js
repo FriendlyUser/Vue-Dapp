@@ -57,7 +57,7 @@ contract('Todo', function(accounts) {
 
             let todoListStructs = []
             for (let i = 0; i < 2; i++) {
-                const myTodoListInstance = {
+                const todo = {
                     ids:            todoList[FIELD_IDS][i],
                     contents:       todoList[FIELD_CONTENTS][i],
                     owners:         todoList[FIELD_OWNERS][i],

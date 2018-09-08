@@ -46,7 +46,7 @@ contract TodoList {
         uint256[] memory timestamps   = new uint256[](indexes.length);
         
         for (uint256 i = 0; i < indexes.length; i++) {
-            Todo storage todoitem = todos[msg.sender];
+            Todo storage todoitem = todos[msg.sender][i];
             ids[i] = todoitem.id;
             contents[i] = todoitem.content;
             owners[i] = todoitem.owner;

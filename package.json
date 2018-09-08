@@ -1,9 +1,9 @@
 {
   "name": "truffle-vue-dapp",
-  "version": "0.1.0",
   "description": "Simple Dapp built on top of a vue.js truffle box",
   "author": "grandfleet <studentdavidli@gmail.com>",
   "repository": "https://github.com/FriendlyUser/Vue-Dapp.git",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "node scripts/dev-server.js",

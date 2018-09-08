@@ -76,7 +76,7 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
+        <Logo img_src={imgUrl('VueDappLogo.png')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
@@ -104,13 +104,13 @@ const Features = props => (
     {[
       {
         content: 'Users can create an account through a smart contract.',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('Trustless.png'),
         imageAlign: 'top',
         title: 'Authentication',
       },
       {
         content: 'A simple decentralized todolist, users can add entries.',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('TodoList.png'),
         imageAlign: 'top',
         title: 'Todolist ',
       },
@@ -131,8 +131,8 @@ const LearnHow = props => (
   <Block background="light">
     {[
       {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Trustless systems are massive important in the future with the rest of corrupt organizations abusing their power. For example every major social platofrm minus twitter banning alex jones. IN addition, I believe that blockchain technoogies will revolutionize the way business is done, and be as important if not more important than artifical intelligence. Although the Ethereum blockchain has be superseded by Hedera Hashgraph because of improvements to the blockchain data storage algorithm and the superiority of a Hashgraph, solidity will likely remain useful for a long time to come. Unless security is the most important, I doubt vyper will catch on.',
+        image: imgUrl('Trustless.png'),
         imageAlign: 'right',
         title: 'Learn How',
       },
@@ -144,8 +144,8 @@ const TryOut = props => (
   <Block id="try">
     {[
       {
-        content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
+        content: 'The simplest way to try out this app is to navigate the url. Available on surge,  http://myFirstdApp.surge.sh',
+        image: imgUrl('TodoList.png'),
         imageAlign: 'left',
         title: 'Try it Out',
       },
@@ -157,8 +157,8 @@ const Description = props => (
   <Block background="dark">
     {[
       {
-        content: 'This project has been invaluable for me learning how to work with vue, solidity, truffle and build decentralized applications',
-        image: imgUrl('docusaurus.svg'),
+        content: 'This project has been invaluable for me learning how to work with vue, solidity, truffle and build decentralized applications. Solidity is used for smart contracts and deployed to the various test networks including kovan, rinkeby and ropsten. For the majority of use cases, I perfer to deploy my contracts to rinkeby, and then kovan. This Vue Dapp has authentication and todolist storage',
+        image: imgUrl('VueDappLogo.png'),
         imageAlign: 'right',
         title: 'Description',
       },

@@ -41,7 +41,7 @@ const siteConfig = {
     {doc: 'Migrations', label: 'Docs'},
     {page: "help", label: "Help" },
     // Links to href destination
-    { components: "TodoList.md", label: "TodoList" },
+    {doc: "TodoList.md", label: "TodoList Component" },
     // Links to href destination
     { href: "https://github.com/FriendlyUser/Vue-Dapp/", label: "Github" },
     {blog: true, label: 'Blog'},
@@ -51,8 +51,8 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: '/img/docusaurus.svg',
-  footerIcon: '/img/docusaurus.svg',
+  headerIcon: '/img/VueDappLogo.png',
+  footerIcon: '/img/VueDappLogo.png',
   favicon: '/img/favicon.png',
 
   /* colors for website */

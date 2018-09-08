@@ -38,17 +38,13 @@ script:
   - sudo add-apt-repository -y ppa:ethereum/ethereum
   - sudo apt-get update
   - sudo apt-get -y install solc
-  - ls
   #- ./vueDoc.sh
   - solidity-docgen /home/travis/build/FriendlyUser/Vue-Dapp /home/travis/build/FriendlyUser/Vue-Dapp/contracts /home/travis/build/FriendlyUser/Vue-Dapp
-  - cd docs
-  - ls
-  - cd ../
   - cd website
   - npm install
-  - ls
   - npm run build
   - cd ../
+  # Consider removing docs/components
   - mv docs mddocs
   - mv mddocs website/build/vue-dapp
 deploy:

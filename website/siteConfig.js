@@ -39,7 +39,12 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'Migrations', label: 'Docs'},
-    {doc: 'TodoList.md', label: 'Docs'},
+    {page: "help", label: "Help" },
+    {search: true},
+    // Links to href destination
+    { href: "https://github.com/", label: "GitHub" },
+    // Links to href destination
+    { href: "/components/TodoList.md", label: "TodoList" },
     {blog: true, label: 'Blog'},
   ],
 

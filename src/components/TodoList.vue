@@ -12,7 +12,7 @@
 <script>
 /**
    * The custom HTML `<textarea>` component.
-   * 
+   *
    * @author David Li
    * @license MIT
    */
@@ -40,8 +40,8 @@ export default {
         }
       })
     }).catch(err => {
-        console.log(err)
-        console.log('Test')
+          console.log(err)
+          console.log('Test')
     })
   },
   methods: {

@@ -104,7 +104,7 @@ const Features = props => (
     {[
       {
         content: 'Users can create an account through a smart contract.',
-        image: imgUrl('Trustless.png'),
+        image: imgUrl('TrustLess.png'),
         imageAlign: 'top',
         title: 'Authentication',
       },
@@ -132,7 +132,7 @@ const LearnHow = props => (
     {[
       {
         content: 'Trustless systems are massive important in the future with the rest of corrupt organizations abusing their power. For example every major social platofrm minus twitter banning alex jones. IN addition, I believe that blockchain technoogies will revolutionize the way business is done, and be as important if not more important than artifical intelligence. Although the Ethereum blockchain has be superseded by Hedera Hashgraph because of improvements to the blockchain data storage algorithm and the superiority of a Hashgraph, solidity will likely remain useful for a long time to come. Unless security is the most important, I doubt vyper will catch on.',
-        image: imgUrl('Trustless.png'),
+        image: imgUrl('TrustLess.png'),
         imageAlign: 'right',
         title: 'Learn How',
       },

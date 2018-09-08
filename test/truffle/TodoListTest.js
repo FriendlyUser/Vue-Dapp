@@ -36,12 +36,14 @@ contract('Todo', function(accounts) {
         it("Getting Number of Todos",async() => {
             //console.log("      getting number of Todos")
             const lastIds = await myTodoListInstance.lastIds(owner)
-            assert.strictEqual(1,lastIds)
+            assert.strictEqual(1,lastIds.toNumber())
         })
         it("Getting Data of all todos",async() => {
             let idsToCheck = [0,1] 
-            const todoData = await myTodoListInstance.returnAllTodos(idsToCheck);
-            console.log(todoData)
+            const todoData = await myTodoListInstance.returnAllTodos([0, 1], { from: accounts[0]});
+            console.log('      todos =',todoData )
+            const todoData2 = await myTodoListInstance.returnAllTodos([1]);
+            console.log('      todos =',todoData2 )
         })
         /** 
         it("Authenticating a User", async() => {

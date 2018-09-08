@@ -29,8 +29,8 @@ contract TodoList {
       require(!todos[msg.sender][_todoId].isCompleted);
       todos[msg.sender][_todoId].isCompleted = true;
    }
-
-   function returnAllTodos(uint[] indexes) external 
+  
+   function returnAllTodos(uint[] indexes) external view
    returns (
        uint256[],
        bytes32[],
@@ -39,20 +39,20 @@ contract TodoList {
        uint256[]
    )
    {
-        uint256[] memory ids          = new uint256[](indexes.length);
-        bytes32[] memory contents     = new bytes32[](indexes.length);
-        address[] memory owners       = new address[](indexes.length);
-        bool[]    memory isCompleteds = new bool[](indexes.length);
-        uint256[] memory timestamps   = new uint256[](indexes.length);
+      uint256[] memory ids          = new uint256[](indexes.length);
+      bytes32[] memory contents     = new bytes32[](indexes.length);
+      address[] memory owners       = new address[](indexes.length);
+      bool[]    memory isCompleteds = new bool[](indexes.length);
+      uint256[] memory timestamps   = new uint256[](indexes.length);
         
-        for (uint256 i = 0; i < indexes.length; i++) {
-            Todo storage todoitem = todos[msg.sender][i];
-            ids[i] = todoitem.id;
-            contents[i] = todoitem.content;
-            owners[i] = todoitem.owner;
-            isCompleteds[i] = todoitem.isCompleted;
-            timestamps[i] = todoitem.timestamp;
-        }
-       return (ids, contents, owners, isCompleteds, timestamps);
+      for (uint256 i = 0; i < indexes.length; i++) {
+        Todo storage todoitem = todos[msg.sender][i];
+        ids[i] = todoitem.id;
+        contents[i] = todoitem.content;
+        owners[i] = todoitem.owner;
+        isCompleteds[i] = todoitem.isCompleted;
+        timestamps[i] = todoitem.timestamp;
+      }
+      return (ids, contents, owners, isCompleteds, timestamps);
    }
 }

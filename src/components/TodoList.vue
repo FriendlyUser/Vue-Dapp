@@ -25,7 +25,7 @@ export default {
   }, */
   beforeCreate: function () {
     TodoListTest.init().then(() => {
-      TodoListTest.todos(window.web3.eth.accounts[0]).then((todolistStruct) => {
+      TodoListTest.lastIds(window.web3.eth.accounts[0]).then((todolistStruct) => {
         if (todolistStruct) {
           // Users.authenticate().then(pseudo => {
           //  this.pseudo = pseudo
@@ -33,8 +33,8 @@ export default {
         }
       })
     }).catch(err => {
-      console.log(err)
-      console.log('Test')
+        console.log(err)
+        console.log('Test')
     })
   },
   methods: {

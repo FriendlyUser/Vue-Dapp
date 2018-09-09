@@ -19,14 +19,20 @@ module.exports = {
     ropsten: {
       provider: new HDWalletProvider(process.env.MNENOMIC, "https://ropsten.infura.io/" + process.env.INFURA_API_KEY),
       network_id: 3,
-      gas: 3000000,
-      gasPrice: 21
+      gas: 7000000,
+      gasPrice: 28921116127
     },
     rinkeby: {
       provider: new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/" + process.env.INFURA_API_KEY),
       network_id: 4,
+      gas: 6000000,
+      gasPrice: 28921116127
+    },
+    kovan: {
+      provider: new HDWalletProvider(mnemonic, "https://kovan.infura.io/" + process.env.INFURA_API_KEY),
+      network_id: 42,
       gas: 4612388,
-      gasPrice: 100000000000
+      gasPrice: 28921116127
     },
     coverage: {
       host: "localhost",

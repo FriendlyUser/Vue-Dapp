@@ -3,13 +3,10 @@
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/help.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://friendlyuser.github.io/Vue-Dapp/en/help.html" /> </url>
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://friendlyuser.github.io/Vue-Dapp/en/index.html" /> </url>
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://friendlyuser.github.io/Vue-Dapp/en/users.html" /> </url>
+<url> <loc>https://friendlyuser.github.io/Vue-Dapp/blog/2018/09/09/VueDocs.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/blog/2018/09/08/Status-Report.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/blog/2018/08/25/CI-version-1.2.0.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/blog/2017/10/24/new-version-1.0.0.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://friendlyuser.github.io/Vue-Dapp/blog/2017/09/26/adding-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://friendlyuser.github.io/Vue-Dapp/blog/2017/09/25/testing-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://friendlyuser.github.io/Vue-Dapp/blog/2017/04/10/blog-post-two.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://friendlyuser.github.io/Vue-Dapp/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/docs/Migrations.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://friendlyuser.github.io/Vue-Dapp/docs/Migrations.html" /> </url>
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/docs/TodoList.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://friendlyuser.github.io/Vue-Dapp/docs/TodoList.html" /> </url>
 <url> <loc>https://friendlyuser.github.io/Vue-Dapp/docs/Users.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://friendlyuser.github.io/Vue-Dapp/docs/Users.html" /> </url>

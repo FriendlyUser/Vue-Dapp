@@ -4,7 +4,7 @@
         <title>Vue Dapp info Blog</title>
         <link>https://friendlyuser.github.io//Vue-Dapp/blog</link>
         <description>The best place to stay up-to-date with the latest Vue Dapp info news and events.</description>
-        <lastBuildDate>Sat, 08 Sep 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 09 Sep 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://friendlyuser.github.io//Vue-Dapp/blog</link>
         </image>
         <copyright>Copyright © 2018 David Li</copyright>
+        <item>
+            <title><![CDATA[Documentation of Vuejs compnents]]></title>
+            <link>https://friendlyuser.github.io//Vue-Dapp/blog/2018/09/09/VueDocs.html</link>
+            <guid>https://friendlyuser.github.io//Vue-Dapp/blog/2018/09/09/VueDocs.html</guid>
+            <pubDate>Sun, 09 Sep 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Documentation of vue components can be done with</p> <ul> <li><a href="https://www.npmjs.com/package/propdoc">https://www.npmjs.com/package/propdoc</a></li> <li><a href="https://github.com/mattrothenberg/vue-elucidate">https://github.com/mattrothenberg/vue-elucidate</a></li> <li><a href="https://www.npmjs.com/package/@vuedoc/md">https://www.npmjs.com/package/@vuedoc/md</a></li> <li><a href="https://www.npmjs.com/package/jsdoc-vuedoc">https://www.npmjs.com/package/jsdoc-vuedoc</a></li> </ul> ]]></description>
+        </item>
         <item>
             <title><![CDATA[Sept Status Report]]></title>
             <link>https://friendlyuser.github.io//Vue-Dapp/blog/2018/09/08/Status-Report.html</link>
@@ -33,38 +40,6 @@
             <guid>https://friendlyuser.github.io//Vue-Dapp/blog/2017/10/24/new-version-1.0.0.html</guid>
             <pubDate>Tue, 24 Oct 2017 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Previously, I had used a ad-hoc method of documentation.js and jsdoc to generate documentation for this project. Icons are from free website <a href="https://all-free-download.com/free-vector/download/business_icons_268686_download.html">all-free-download</a> and I assume since I am doing open source projects, I can use it for free.</p> <p>Using vuedoc is ...</p>]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Adding RSS Support]]></title>
-            <link>https://friendlyuser.github.io//Vue-Dapp/blog/2017/09/26/adding-rss.html</link>
-            <guid>https://friendlyuser.github.io//Vue-Dapp/blog/2017/09/26/adding-rss.html</guid>
-            <pubDate>Tue, 26 Sep 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>This is a test post.</p> <p>A whole bunch of other information.</p> ]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Adding RSS Support - RSS Truncation Test]]></title>
-            <link>https://friendlyuser.github.io//Vue-Dapp/blog/2017/09/25/testing-rss.html</link>
-            <guid>https://friendlyuser.github.io//Vue-Dapp/blog/2017/09/25/testing-rss.html</guid>
-            <pubDate>Mon, 25 Sep 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</p>
-<p>This should be truncated.</p>
-]]></description>
-        </item>
-        <item>
-            <title><![CDATA[New Blog Post]]></title>
-            <link>https://friendlyuser.github.io//Vue-Dapp/blog/2017/04/10/blog-post-two.html</link>
-            <guid>https://friendlyuser.github.io//Vue-Dapp/blog/2017/04/10/blog-post-two.html</guid>
-            <pubDate>Mon, 10 Apr 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
-]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Blog Title]]></title>
-            <link>https://friendlyuser.github.io//Vue-Dapp/blog/2016/03/11/blog-post.html</link>
-            <guid>https://friendlyuser.github.io//Vue-Dapp/blog/2016/03/11/blog-post.html</guid>
-            <pubDate>Fri, 11 Mar 2016 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
-]]></description>
         </item>
     </channel>
 </rss>

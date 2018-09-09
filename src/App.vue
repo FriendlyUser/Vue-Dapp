@@ -14,6 +14,7 @@
           value="true"
           v-for="(item, i) in items"
           :key="i"
+          router v-bind:to="item.action"
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -47,7 +48,7 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <blockquote> Cool App goes here</blockquote>
+      <!--- <blockquote> Cool App goes here</blockquote> -->
       <img src="./assets/logo.png" height="200px" />
       <router-view/>
       <hello-metamask/>
@@ -93,7 +94,7 @@
    */
   export default {
     beforeCreate () {
-      console.log('registerWeb3 Action dispatched from casino-dapp.vue')
+      // console.log('registerWeb3 Action dispatched from casino-dapp.vue')
       this.$store.dispatch('registerWeb3')
     },
     components: {
@@ -107,13 +108,29 @@
         drawer: true,
         fixed: false,
         items: [{
-          icon: 'bubble_chart',
-          title: 'Inspire'
+          icon: 'home',
+          title: 'Home',
+          action: '/'
+        },
+        {
+          icon: 'dashboard',
+          title: 'Dashboard',
+          action: 'dashboard'
+        },
+        {
+          icon: 'question_answer',
+          title: 'Signup',
+          action: 'signup'
+        },
+        {
+          icon: 'account_box',
+          title: 'TodoList',
+          action: 'todolist'
         }],
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'Truffle Dapp'
+        title: 'Todo List Dapp'
       }
     },
     name: 'App'
@@ -129,4 +146,11 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+.v-text-field__slot {
+    display: flex;
+    flex: 1 1 auto;
+    height: 2.5% !important;
+    position: relative;
+}
+
 </style>

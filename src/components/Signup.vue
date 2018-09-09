@@ -6,7 +6,7 @@
       <v-card-title primary-title>
         <div>
           <div class="headline">Sign up</div>
-          <span class="grey--text">Prerequestites</span>
+          <span class="grey--text">Prereqs</span>
         </div>
       </v-card-title>
 
@@ -16,11 +16,24 @@
           <li>Ether --- New metamask accounts come with ether by default, but otherwise go to ropsten test faucet.</li>
         </ul>
 
-      <div class="simple-form">
-        <button @click="signup" name="signup" class="mybutton">Sign up</button>
-        <input name="pseudo" v-model="form.pseudo" placeholder="Username">
-      </div>
-
+       <form class="form">
+          <v-layout row wrap>
+            <v-flex xs5 offset-xs1>
+              <!-- <button @click="addtodo" name="addtodo">Add Item</button> -->
+              <!---<input name="todo" v-model="form.todo"> -->
+              <!--<label for="todo">Todo</label> -->
+              <v-text-field
+                  v-model="form.pseudo"
+                  :rules="nameRules"
+                  label="Username"
+                  required
+              ></v-text-field>
+            </v-flex>
+            <v-flex xs2 offset-xs1>
+              <v-btn depressed color="primary" @click="signup" name="addusername">Sign Up</v-btn>
+            </v-flex>
+          </v-layout>
+        </form>
       </v-card-text>
 
       <v-card-actions>
@@ -55,7 +68,11 @@
         form: {
           pseudo: undefined
         },
-        show: true
+        nameRules: [
+          v => !!v || 'Name is required',
+          v => v.length <= 15 || 'Name must be less than 15 characters'
+        ],
+        show: false
       }
     },
     beforeCreate: function () {

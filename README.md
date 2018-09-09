@@ -5,8 +5,9 @@ The can viewed at http://myFirstdApp.surge.sh, also this app uses vuetify, vue, 
 
 This app will eventually become my decentralized todo-list on ropsten, that way I can keep what I need to do and cannot be altered. Not really economically viable, more of a learning project.
 
-This app will eventually be deployed on all test nets including ropsten, kovan and rinkeby via infura.
+This deployed on all test nets including ropsten, kovan and rinkeby via infura.
 
+![Todo List](docs/screenshot.png)
 ## Installation
 Make sure the following global packages are installed
 ```sh

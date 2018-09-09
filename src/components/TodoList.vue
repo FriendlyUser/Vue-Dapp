@@ -1,20 +1,21 @@
 <template>
   <div class="todolist">
-<!-- <h1>{{ msg }}</h1>
-    <div v-if="userExists">
-      Welcome {{ pseudo }}. Destroy your account by clicking <a href="#" @click="destroyAccount">here</a>.
-    </div> 
-    <div v-else>Sign up <router-link to="/signup">here</router-link>.</div> -->
-    <h2>{{msg}}</h2>
 
-    <h3>Add Todo Items</h3>
-    <div class="form">
-      <div class="entry">
-        <button @click="addtodo" name="addtodo">Add Item</button>
-        <input name="todo" v-model="form.todo">
-        <label for="todo">Todo</label>
-      </div>
-    </div>
+     <form class="form">
+       <v-layout row wrap>
+        <v-flex xs6 offset-xs2>
+          <v-text-field
+              v-model="form.todo"
+              :rules="nameRules"
+              label="Todo Item"
+              required
+            ></v-text-field>
+          </v-flex>
+          <v-flex xs2 offset-xs1>
+            <v-btn depressed color="primary" @click="addtodo" name="addtodo">Add Todo</v-btn>
+          </v-flex>
+        </v-layout>
+    </form>
     <h3> TodoList </h3>
     <div class="table-responsive-vertical shadow-z-1">
       <table id="table" class="table table-hover table-mc-blue">
@@ -29,14 +30,18 @@
         </thead>
         <tbody>
         <tr v-for="todo in todolist" :key="todo.ids">
-        <!-- content -->
-
           <td>{{todo.ids}}</td>
           <td>{{todo.contents}}</td>
           <td>{{todo.owners}}</td>
-          <td>{{todo.isCompleteds === true ? '&#10003;' 
-              : '&#10005;' }} 
-            <button v-if="todo.isCompleteds === false" @click="markAsCompleted(todo.ids)"  type="button" name="markAsCompleted">Complete</button>
+          <td>
+            <v-btn depressed small color="warning" v-if="todo.isCompleteds === false" 
+              @click="markAsCompleted(todo.ids)"  type="button" name="markAsCompleted">
+              <v-icon>check</v-icon> Mark as Done
+            </v-btn>
+            <v-btn depressed small color="success" v-if="todo.isCompleteds === true" 
+               type="button" name="markAsCompleted">
+              <v-icon>thumb_up</v-icon>  Completed
+            </v-btn>
           </td>
           <td>{{todo.timestamps}}</td>
         </tr>
@@ -49,7 +54,7 @@
 
 <script>
 /**
-   * The custom HTML `<textarea>` component.
+   * The custom HTML `TodoList` component.
    *
    * @author David Li
    * @license MIT
@@ -61,7 +66,10 @@ export default {
   name: 'addtodo',
   data () {
     return {
-      msg: 'Here is your todo list',
+      nameRules: [
+        v => !!v || 'Name is required',
+        v => v.length <= 25 || 'Name must be less than 15 characters'
+      ],
       form: {
         todo: undefined
       },
@@ -120,6 +128,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+div.v-input__slot > div {
+   height: 0px;
+}
+.v-text-field__slot {
+    height: 0% !important;
+}
+
 h1, h2 {
   font-weight: normal;
   display: block;

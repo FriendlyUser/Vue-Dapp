@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/FriendlyUser/Vue-Dapp.svg?branch=master)](https://travis-ci.org/FriendlyUser/Vue-Dapp)
 # Summary
 
-The can viewed at http://myFirstdApp.surge.sh, also this app uses vuetify, vue, metamask and truffle.
+The can viewed at http://todoListDApp.surge.sh.
 
-This app will eventually become my decentralized todo-list on ropsten, that way I can keep what I need to do and cannot be altered. Not really economically viable, more of a learning project.
+This app uses vuetify, vue, metamask and truffle.
 
 This deployed on all test nets including ropsten, kovan and rinkeby via infura.
 

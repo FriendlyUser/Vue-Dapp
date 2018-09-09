@@ -16,12 +16,9 @@
           <li>Ether --- New metamask accounts come with ether by default, but otherwise go to ropsten test faucet.</li>
         </ul>
 
-      <div class="form">
-        <div class="entry">
-          <button @click="signup" name="signup">Sign up</button>
-          <input name="pseudo" v-model="form.pseudo">
-          <label for="pseudo">Pseudo</label>
-        </div>
+      <div class="simple-form">
+        <button @click="signup" name="signup" class="mybutton">Sign up</button>
+        <input name="pseudo" v-model="form.pseudo" placeholder="Username">
       </div>
 
       </v-card-text>
@@ -58,7 +55,7 @@
         form: {
           pseudo: undefined
         },
-        show: false
+        show: true
       }
     },
     beforeCreate: function () {
@@ -81,32 +78,43 @@
 </script>
 
 <style lang="scss" scoped>
+  .mybutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+  .mybutton {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #4CAF50;
+  }
+
+  .mybutton:hover {
+      background-color: #4CAF50;
+      color: white;
+  }
 
   #signup {
     text-align: center;
-    
-    .form {
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      
-      .entry {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        
-        label {
-          margin-right: 20px
-        }
-        
-        button {
-          margin-left: 20px
-        }  
-        
-      }
-        
+    .simple-form input {
+      margin: 0 .25rem;
+      min-width: 125px;
+      border: 1px solid #eee;
+      border-left: 3px solid;
+      border-radius: 5px;
+      transition: border-color .5s ease-out;
     }
-    
+    .simple-form input:optional {
+      border-left-color: #4CAF50;
+    } 
   }
 
 </style>

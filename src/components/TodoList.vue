@@ -6,6 +6,15 @@
     </div> 
     <div v-else>Sign up <router-link to="/signup">here</router-link>.</div> -->
     <h2>{{msg}}</h2>
+
+    <h3>Add Todo Items</h3>
+    <div class="form">
+        <div class="entry">
+          <button @click="addtodo" name="addtodo">Sign up</button>
+          <input name="todo" v-model="form.todo">
+          <label for="pseudo">Pseudo</label>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -17,13 +26,16 @@
    * @license MIT
    */
 
-import TodoListTest from '@/js/todolist'
+import TodoListLogic from '@/js/todolist'
 
 export default {
-  name: 'todolist',
+  name: 'addtodo',
   data () {
     return {
-      msg: 'Here is your todo list'
+      msg: 'Here is your todo list',
+      form: {
+        todo: undefined
+      }
     }
   },
   /* computed: {
@@ -31,13 +43,14 @@ export default {
     }
   }, */
   beforeCreate: function () {
-    TodoListTest.init().then(() => {
-      TodoListTest.lastIds(window.web3.eth.accounts[0]).then((todolistStruct) => {
-        if (todolistStruct) {
-          // Users.authenticate().then(pseudo => {
-          //  this.pseudo = pseudo
-          console.log(todolistStruct)
-        }
+    TodoListLogic.init().then(() => {
+      TodoListLogic.returnAllTodos(window.web3.eth.accounts[0]).then((todoList) => {
+        // console.log(todoList.length)
+        // const numOfTodos = todoList.length
+        // console.log(numOfTodos)
+        console.log('home run')
+        console.log(todoList)
+        // console.log(todoListStructs)
       })
     })
     .catch(err => {
@@ -46,13 +59,17 @@ export default {
     })
   },
   methods: {
-    destroyAccount: function (e) {
-     /* e.preventDefault()
-      Users.destroy().then(() => {
-        this.pseudo = undefined
-      }).catch(err => {
-        console.log(err)
-      }) */
+    addtodo: function () {
+      // let self = this
+      if (typeof this.form.todo !== 'undefined' && this.form.todo !== '') {
+        console.log('The form is blank?' + this.form.todo)
+        TodoListLogic.addTodo(this.form.todo).then(tx => {
+          console.log(tx)
+          // self.$router.push('/')
+        }).catch(err => {
+          console.log(err)
+        })
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 import contract from 'truffle-contract'
 import TodoListContract from '@contracts/TodoList.json'
 
-const TodoListTest = {
+const TodoListLogic = {
 
   contract: null,
 
@@ -17,9 +17,9 @@ const TodoListTest = {
       self.contract.deployed().then(instance => {
         self.instance = instance
         resolve()
-        console.log('Gay sex')
+        console.log('Gay sex TODOLIST')
       }).catch(err => {
-        console.log('Not gay sex')
+        console.log('Not gay sex TODOLIST')
         reject(err)
       })
     })
@@ -27,14 +27,16 @@ const TodoListTest = {
 
   addTodo: function (content) {
     let self = this
-
+    console.log('What is Going on')
     return new Promise((resolve, reject) => {
-      self.instance.exists.call(
+      self.instance.addTodo(
         content,
         {from: window.web3.eth.accounts[0]}
-      ).then(exists => {
-        resolve(exists)
+      ).then(tx => {
+        console.log('Testing GAY SEX')
+        resolve(tx)
       }).catch(err => {
+        console.log('More Testing')
         reject(err)
       })
     })
@@ -46,9 +48,9 @@ const TodoListTest = {
     return new Promise((resolve, reject) => {
       self.instance.markTodoAsCompleted.call(
         {from: window.web3.eth.accounts[0]}
-      ).then(() => {
+      ).then((tx) => {
         // resolve(window.web3.toUtf8(pseudo))
-        resolve()
+        resolve(tx)
       }).catch(err => {
         reject(err)
       })
@@ -57,18 +59,52 @@ const TodoListTest = {
 
   returnAllTodos: function () {
     let self = this
-
+    let numOfTodos = 0
+    let todoListStruct = []
+    const FIELD_IDS = 0
+    const FIELD_CONTENTS = 1
+    const FIELD_OWNERS = 2
+    const FIELD_ISCOMPLETEDS = 3
+    const FIELD_TIMESTAMPS = 4
+    // Promise chain, get the lastId,
+    // and then get all the todos
     return new Promise((resolve, reject) => {
-      self.instance.todos.call(
+      console.log('Testing GAY SEX')
+      self.instance.lastIds.call(
         window.web3.eth.accounts[0]
-      ).then(() => {
+      ).then((numTodos) => {
         // resolve(window.web3.toUtf8(pseudo))
-        resolve()
-      }).catch(err => {
+        // resolve(numTodos)
+        // console.log(numTodos)
+        numOfTodos = numTodos.toNumber()
+        console.log(numOfTodos)
+        // @see https://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n
+        const todoItems = Array.from(Array(numOfTodos).keys())
+        self.instance.returnAllTodos.call(
+          todoItems, {from: window.web3.eth.accounts[0]}
+        ).then((todoList) => {
+          console.log(todoList)
+          for (let i = 0; i < numOfTodos; i++) {
+            let todo = {
+              ids: todoList[FIELD_IDS][i].toNumber(),
+              contents: window.web3.toUtf8(todoList[FIELD_CONTENTS][i]),
+              owners: todoList[FIELD_OWNERS][i],
+              isCompleteds: todoList[FIELD_ISCOMPLETEDS][i],
+              timestamps: todoList[FIELD_TIMESTAMPS][i].toNumber()
+            }
+            todoListStruct.push(todo)
+            console.log(todoListStruct)
+          }
+          resolve(todoListStruct)
+        })
+      })
+      .catch(err => {
+        console.log(err)
+        console.log('error message')
         reject(err)
       })
     })
   }
 }
 
-export default TodoListTest
+export default TodoListLogic

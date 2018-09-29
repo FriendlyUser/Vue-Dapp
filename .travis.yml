@@ -50,6 +50,9 @@ script:
   - rm -rf docs/components
   - mv docs mddocs
   - mv mddocs website/build/vue-dapp
+  - npm run stop
+  - rm -rf test/truffle/TestUsers.sol
+  - rm -rf test/truffle/TestTodoList.sol
 after_script:
   - npm run coverage && cat coverage/lcov.info | coveralls
 deploy:

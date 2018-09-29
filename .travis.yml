@@ -30,7 +30,6 @@ script:
   - npm run test/truffle 
   #- npm run unit
   - npm run e2e
-  - npm run stop
   - echo "Building the app and deploying to surge"
   - npm run build
   - npm install surge --save-dev

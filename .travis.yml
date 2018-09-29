@@ -50,6 +50,8 @@ script:
   - rm -rf docs/components
   - mv docs mddocs
   - mv mddocs website/build/vue-dapp
+after_script:
+  - npm run coverage && cat coverage/lcov.info | coveralls
 deploy:
   provider: pages
   skip-cleanup: true

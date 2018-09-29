@@ -23,6 +23,7 @@ install:
   - npm install bignumber.js --save-dev
 script:
   #- npm run lint
+  - mv truffle-config.js truffle.js
   - npm run ganache
   - sleep 5
   - truffle migrate --network development
@@ -50,7 +51,6 @@ script:
   - rm -rf docs/components
   - mv docs mddocs
   - mv mddocs website/build/vue-dapp
-  - npm run stop
   - rm -rf test/truffle/TestUsers.sol
   - rm -rf test/truffle/TestTodoList.sol
 after_script:

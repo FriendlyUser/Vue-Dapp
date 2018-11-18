@@ -55,13 +55,13 @@ script:
   # - rm -rf test/truffle/TestTodoList.sol
 after_script:
   - npm run coverage && cat coverage/lcov.info | coveralls
-deploy:
-  provider: pages
-  skip-cleanup: true
-  local_dir: website/build/vue-dapp  # or remove this line to upload from root of repo
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep-history: true
-  on:
-    branch: master
+# deploy:
+#  provider: pages
+#  skip-cleanup: true
+#  local_dir: website/build/vue-dapp  # or remove this line to upload from root of repo
+#  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+#  keep-history: true
+#  on:
+#    branch: master
 #after_script:
 #  - npm run coverage && cat coverage/lcov.info | coveralls

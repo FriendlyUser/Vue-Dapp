@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/FriendlyUser/Vue-Dapp.svg?branch=master)](https://travis-ci.org/FriendlyUser/Vue-Dapp) [![Coverage Status](https://coveralls.io/repos/github/FriendlyUser/Vue-Dapp/badge.svg?branch=master)](https://coveralls.io/github/FriendlyUser/Vue-Dapp?branch=master)
+[![Build Status](https://travis-ci.org/FriendlyUser/Vue-Dapp.svg?branch=master)](https://travis-ci.org/FriendlyUser/Vue-Dapp) [![DOI](https://zenodo.org/badge/138513381.svg)](https://zenodo.org/badge/latestdoi/138513381)
 
 # Summary
 

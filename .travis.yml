@@ -38,10 +38,7 @@ script:
   - echo "Making documentation"
   - sudo add-apt-repository -y ppa:ethereum/ethereum
   - sudo apt-get update
-  - sudo apt-get -y install solc=0.4.20
-  - sudo apt-get -y install solc=V0.4.20
-  - sudo apt-get -y install solc=v0.4.20
-  - sudo apt-get -y install solc=4.20
+  - sudo apt-get -y install solc
   #- ./vueDoc.sh
   - solidity-docgen /home/travis/build/FriendlyUser/Vue-Dapp /home/travis/build/FriendlyUser/Vue-Dapp/contracts /home/travis/build/FriendlyUser/Vue-Dapp
   - cd website

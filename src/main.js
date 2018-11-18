@@ -20,18 +20,19 @@ import 'vuetify/dist/vuetify.min.css'
 Vue.config.productionTip = false
 Vue.use(Vuetify)
 
+/* eslint-disable */
 window.addEventListener('load', async () => {
     // Modern dapp browsers...
     if (window.ethereum) {
-        window.web3 = new Web3(ethereum);
-        try {
-            // Request account access if needed
-            await ethereum.enable();
-            // Acccounts now exposed
-            web3.eth.sendTransaction({/* ... */});
-        } catch (error) {
-            // User denied account access...
-        }
+      window.web3 = new Web3(ethereum)
+      try {
+          // Request account access if needed
+          await ethereum.enable()
+          // Acccounts now exposed
+          web3.eth.sendTransaction({/* ... */})
+      } catch (error) {
+          // User denied account access...
+      }
     }
     // Legacy dapp browsers...
     else if (window.web3) {
@@ -45,6 +46,7 @@ window.addEventListener('load', async () => {
     else {
         console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
     }
+/* eslint-enable */
   /* eslint-disable no-new */
   new Vue({
     el: '#app',

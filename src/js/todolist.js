@@ -17,9 +17,7 @@ const TodoListLogic = {
       self.contract.deployed().then(instance => {
         self.instance = instance
         resolve()
-        console.log('Gay sex TODOLIST')
       }).catch(err => {
-        console.log('Not gay sex TODOLIST')
         reject(err)
       })
     })
@@ -27,16 +25,13 @@ const TodoListLogic = {
 
   addTodo: function (content) {
     let self = this
-    console.log('What is Going on')
     return new Promise((resolve, reject) => {
       self.instance.addTodo(
         content,
         {from: window.web3.eth.accounts[0]}
       ).then(tx => {
-        console.log('Testing GAY SEX')
         resolve(tx)
       }).catch(err => {
-        console.log('More Testing')
         reject(err)
       })
     })

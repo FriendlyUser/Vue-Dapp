@@ -30,11 +30,10 @@ const TodoListLogic = {
         content,
         {from: window.web3.eth.accounts[0]}
       ).then(tx => {
-        console.log(tx)
-      }).then(
-      .catch(err => {
+        resolve(tx)
+      }).catch(err => {
         reject(err)
-      }) 
+      })
     })
   },
 

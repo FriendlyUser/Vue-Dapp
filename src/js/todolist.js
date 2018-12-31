@@ -29,24 +29,12 @@ const TodoListLogic = {
       self.instance.addTodo(
         content,
         {from: window.web3.eth.accounts[0]}
-      ).on('confirmation', function(confNumber, receipt){
-        console.log(confNumber)
-        console.log(recipt)
-        // resolve(receipt)
-      })
-      .on('error', function(error){ 
-        reject(error)
-      })
-      .then(function(receipt){
-          // will be fired once the receipt is mined
-          resolve(tx)
-      })
-      /** .then(tx => {
-        resolve(tx)
-      }).catch(err => {
+      ).then(tx => {
+        console.log(tx)
+      }).then(
+      .catch(err => {
         reject(err)
       }) 
-      */
     })
   },
 

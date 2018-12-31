@@ -99,7 +99,10 @@ export default {
           // self.$router.push('/')
         })
         .then(() => {
-          this.returnAllTodos()
+          // due to issues with truffle-contract being unable to await for transactions, I'll assume we will wait for 30 seconds and then reload all todos
+          setTimeout(function () {
+            this.returnAllTodos()
+          }, 5000);
         })
         .catch(err => {
           console.log(err)

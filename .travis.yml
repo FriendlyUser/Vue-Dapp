@@ -24,11 +24,6 @@ install:
 script:
   #- npm run lint
   - mv truffle-config.js truffle.js
-  - npm run ganache
-  - sleep 5
-  - truffle migrate --network development
-  - npm run test/truffle 
-  #- npm run unit
   - npm run e2e
   - echo "Building the app and deploying to surge"
   - npm run build
@@ -53,10 +48,6 @@ script:
   - rm -rf docs/components
   - mv docs mddocs
   - mv mddocs website/build/vue-dapp
-  - rm -rf test/truffle/TestUsers.sol
-  - rm -rf test/truffle/TestTodoList.sol
-after_script:
-  - npm run coverage && cat coverage/lcov.info | coveralls
 deploy:
   provider: pages
   skip-cleanup: true

@@ -64,6 +64,6 @@ after_script:
     github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
     keep-history: true
     on:
-    branch: master
+      all_branches: true
 after_script:
     - npm run coverage && cat coverage/lcov.info | coveralls

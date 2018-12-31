@@ -16,9 +16,6 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 install:
-  - npm install -g truffle@0.4.24
-  - npm install -g ganache-cli
-  #- npm install --global @vuedoc/md
   - npm install
   - npm install bignumber.js --save-dev
 script:

@@ -12,7 +12,7 @@
             <url>https://friendlyuser.github.io//Vue-Dapp//img/VueDappLogo.png</url>
             <link>https://friendlyuser.github.io//Vue-Dapp/blog</link>
         </image>
-        <copyright>Copyright © 2018 David Li</copyright>
+        <copyright>Copyright © 2019 David Li</copyright>
         <item>
             <title><![CDATA[Documentation of Vuejs compnents]]></title>
             <link>https://friendlyuser.github.io//Vue-Dapp/blog/2018/09/09/VueDocs.html</link>
@@ -32,7 +32,7 @@
             <link>https://friendlyuser.github.io//Vue-Dapp/blog/2018/08/25/CI-version-1.2.0.html</link>
             <guid>https://friendlyuser.github.io//Vue-Dapp/blog/2018/08/25/CI-version-1.2.0.html</guid>
             <pubDate>Sat, 25 Aug 2018 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> <p>Test goes here.</p> <img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuNBEpytDB57GjLC8o2n8pSdCIrMmKWW6oNB11L0bGrABIufnIRha9-EMIot8oQ_aSaZDIm7P3000" alt="">]]></description>
+            <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> <p>Test goes here.</p> <img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuNBEpytDB57GjLC8o2n8pSdCIrMmKWW6oNB11L0bGrABIufnIRha9-EMIot8oQ_aSaZDIm7P3000" alt>]]></description>
         </item>
         <item>
             <title><![CDATA[Vuedoc and Icons]]></title>

@@ -76,17 +76,12 @@ export default {
       todolist: []
     }
   },
-  /* computed: {
-    userExists: function () {
-    }
-  }, */
   beforeCreate: function () {
     TodoListLogic.init().then(() => {
       this.returnAllTodos()
     })
     .catch(err => {
       console.log(err)
-      console.log('Test')
     })
   },
   methods: {

@@ -19,9 +19,7 @@
        <form class="form">
           <v-layout row wrap>
             <v-flex xs5 offset-xs1>
-              <!-- <button @click="addtodo" name="addtodo">Add Item</button> -->
-              <!---<input name="todo" v-model="form.todo"> -->
-              <!--<label for="todo">Todo</label> -->
+
               <v-text-field
                   v-model="form.pseudo"
                   :rules="nameRules"

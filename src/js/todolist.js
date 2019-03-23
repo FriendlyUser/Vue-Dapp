@@ -76,13 +76,10 @@ const TodoListLogic = {
     // Promise chain, get the lastId,
     // and then get all the todos
     return new Promise((resolve, reject) => {
-      console.log('Testing GAY SEX')
       self.instance.lastIds.call(
         window.web3.eth.accounts[0]
       ).then((numTodos) => {
-        // resolve(window.web3.toUtf8(pseudo))
-        // resolve(numTodos)
-        // console.log(numTodos)
+
         numOfTodos = numTodos.toNumber()
         console.log(numOfTodos)
         // @see https://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n
@@ -107,7 +104,6 @@ const TodoListLogic = {
       })
       .catch(err => {
         console.log(err)
-        console.log('error message')
         reject(err)
       })
     })
